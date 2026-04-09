@@ -1,13 +1,14 @@
 package com.example.StudentMgmt;
 
 import jakarta.persistence.*;
+import java.util.UUID;
 
 @Entity
 public class Student {
 
     @Id
     @GeneratedValue
-    private Long id;
+    private UUID id;
 
     private String name;
     private String email;
@@ -19,5 +20,23 @@ public class Student {
         this.email = email;
     }
 
-    // getters
+    public UUID getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 }

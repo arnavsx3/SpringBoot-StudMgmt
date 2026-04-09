@@ -1,6 +1,8 @@
 package com.example.StudentMgmt;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.UUID;
 
-public interface StudentRepository extends JpaRepository<Student, Long> {
+
+public interface StudentRepository extends JpaRepository<Student, UUID> {
 }
